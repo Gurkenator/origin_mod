@@ -1,0 +1,17 @@
+{
+  "block.originmod.crate_common": "Crate",
+  "block.originmod.crate_epic": "Crate",
+  "block.originmod.crate_food": "Crate",
+  "block.originmod.crate_good": "Crate",
+  "block.originmod.crate_legendary": "Crate",
+  "block.originmod.crate_rare": "Crate",
+  "item.originmod.aluminium_scraps": "Aluminium Scraps",
+  "item.originmod.canned_vegetables": "Canned Vegetables",
+  "item.originmod.cobalt_scraps": "Cobalt Scraps",
+  "item.originmod.copper_scraps": "Copper Scraps",
+  "item.originmod.gold_scraps": "Gold Scraps",
+  "item.originmod.iron_scraps": "Iron Scraps",
+  "item.originmod.platinum_scraps": "Platinum Scraps",
+  "item.originmod.rotten_wood": "Rotten Wood",
+  "itemGroup.originmod": "Origin Mod"
+}
