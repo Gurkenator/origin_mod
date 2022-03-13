@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "originmod:crate_food",
+    "originmod:crate_common",
+    "originmod:crate_good",
+    "originmod:crate_rare",
+    "originmod:crate_epic",
+    "originmod:crate_legendary"
+  ]
+}

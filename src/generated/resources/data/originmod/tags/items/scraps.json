@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "originmod:iron_scraps",
+    "originmod:copper_scraps",
+    "originmod:aluminium_scraps",
+    "originmod:gold_scraps",
+    "originmod:platinum_scraps",
+    "originmod:cobalt_scraps"
+  ]
+}
