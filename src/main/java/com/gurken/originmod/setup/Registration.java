@@ -31,6 +31,7 @@ public class Registration {
 
     //common properties
     public static final BlockBehaviour.Properties CRATE_PROPERTIES = BlockBehaviour.Properties.of(Material.WOOD).strength(2f);
+    public static final BlockBehaviour.Properties SCRAP_PROPERTIES = BlockBehaviour.Properties.of(Material.METAL).strength(1f);
     public static final Item.Properties ITEM_PROPERTIES = new Item.Properties().tab(ModSetup.ITEM_GROUP);
 
     public static final RegistryObject<Block> CRATE_FOOD = BLOCKS.register("crate_food", () -> new Block(CRATE_PROPERTIES));
@@ -45,6 +46,11 @@ public class Registration {
     public static final RegistryObject<Item> CRATE_EPIC_ITEM = fromBlock(CRATE_EPIC);
     public static final RegistryObject<Block> CRATE_LEGENDARY = BLOCKS.register("crate_legendary", () -> new Block(CRATE_PROPERTIES));
     public static final RegistryObject<Item> CRATE_LEGENDARY_ITEM = fromBlock(CRATE_LEGENDARY);
+
+    public static final RegistryObject<Block> SCRAP_BLOCK = BLOCKS.register("scrap_block", () -> new Block(SCRAP_PROPERTIES));
+    public static final RegistryObject<Item> SCRAP_BLOCK_ITEM = fromBlock(SCRAP_BLOCK);
+    public static final RegistryObject<Block> TIRE = BLOCKS.register("crate_legendary", () -> new Block(SCRAP_PROPERTIES));
+    public static final RegistryObject<Item> TIRE_ITEM = fromBlock(TIRE);
 
     public static final RegistryObject<Item> ROTTEN_WOOD = ITEMS.register("rotten_wood", () -> new Item(ITEM_PROPERTIES));
     public static final RegistryObject<Item> CANNED_VEGETABLES = ITEMS.register("canned_vegetables", () -> new Item(ITEM_PROPERTIES));
