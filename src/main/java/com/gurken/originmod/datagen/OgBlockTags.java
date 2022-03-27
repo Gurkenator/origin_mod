@@ -25,7 +25,8 @@ public class OgBlockTags extends BlockTagsProvider {
                 .add(Registration.CRATE_LEGENDARY.get());
 
         tag(BlockTags.MINEABLE_WITH_PICKAXE)
-                .add(Registration.SCRAP_BLOCK.get());
+                .add(Registration.SCRAP_BLOCK.get())
+                .add(Registration.SCORCHSTONE.get());
 
         tag(Registration.CRATE)
                 .add(Registration.CRATE_FOOD.get())

@@ -22,5 +22,6 @@ public class OgBlockStates extends BlockStateProvider {
         simpleBlock(Registration.CRATE_LEGENDARY.get());
         simpleBlock(Registration.SCRAP_BLOCK.get());
         simpleBlock(Registration.TIRE.get());
+        simpleBlock(Registration.SCORCHSTONE.get());
     }
 }

@@ -4,11 +4,14 @@ import com.gurken.originmod.OriginMod;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
+import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -22,16 +25,19 @@ public class Registration {
 
     private static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, MODID);
     private static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MODID);
+    private static final DeferredRegister<EntityType<?>> ENTITIES = DeferredRegister.create(ForgeRegistries.ENTITIES, MODID);
 
     public static void init() {
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
         BLOCKS.register(bus);
         ITEMS.register(bus);
+        ENTITIES.register(bus);
     }
 
     //common properties
     public static final BlockBehaviour.Properties CRATE_PROPERTIES = BlockBehaviour.Properties.of(Material.WOOD).strength(2f);
     public static final BlockBehaviour.Properties SCRAP_PROPERTIES = BlockBehaviour.Properties.of(Material.METAL).strength(1f);
+    public static final BlockBehaviour.Properties SCORCHSTONE_PROPERTIES = BlockBehaviour.Properties.of(Material.STONE).strength(4f);
     public static final Item.Properties ITEM_PROPERTIES = new Item.Properties().tab(ModSetup.ITEM_GROUP);
 
     public static final RegistryObject<Block> CRATE_FOOD = BLOCKS.register("crate_food", () -> new Block(CRATE_PROPERTIES));
@@ -49,8 +55,11 @@ public class Registration {
 
     public static final RegistryObject<Block> SCRAP_BLOCK = BLOCKS.register("scrap_block", () -> new Block(SCRAP_PROPERTIES));
     public static final RegistryObject<Item> SCRAP_BLOCK_ITEM = fromBlock(SCRAP_BLOCK);
-    public static final RegistryObject<Block> TIRE = BLOCKS.register("crate_legendary", () -> new Block(SCRAP_PROPERTIES));
+    public static final RegistryObject<Block> TIRE = BLOCKS.register("tire", () -> new Block(SCRAP_PROPERTIES));
     public static final RegistryObject<Item> TIRE_ITEM = fromBlock(TIRE);
+
+    public static final RegistryObject<Block> SCORCHSTONE = BLOCKS.register("scorchstone", () -> new Block(SCORCHSTONE_PROPERTIES));
+    public static final RegistryObject<Item> SCORCHSTONE_ITEM = fromBlock(SCORCHSTONE);
 
     public static final RegistryObject<Item> ROTTEN_WOOD = ITEMS.register("rotten_wood", () -> new Item(ITEM_PROPERTIES));
     public static final RegistryObject<Item> CANNED_VEGETABLES = ITEMS.register("canned_vegetables", () -> new Item(ITEM_PROPERTIES));

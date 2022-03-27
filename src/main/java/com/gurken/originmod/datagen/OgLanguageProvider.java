@@ -26,6 +26,7 @@ public class OgLanguageProvider extends LanguageProvider {
 
         add(Registration.SCRAP_BLOCK.get(), "Scrap Block");
         add(Registration.TIRE.get(), "Tire");
+        add(Registration.SCORCHSTONE.get(), "Scorchstone");
 
         add(Registration.ROTTEN_WOOD.get(), "Rotten Wood");
         add(Registration.CANNED_VEGETABLES.get(), "Canned Vegetables");
