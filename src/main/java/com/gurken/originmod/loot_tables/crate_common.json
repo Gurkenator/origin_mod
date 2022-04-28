@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:block",
+  "name": "originmod:crate_common",
+  "pools": [
+    {
+      "rolls": 3,
+      "entries": [
+        {
+          "type": "minecraft:alternatives",
+          "children": [
+            {
+              "type": "minecraft:item",
+              "weight": 6,
+              "name": "minecraft:cake"
+            },
+            {
+              "type": "minecraft:item",
+              "weight": 4,
+              "name": "minecraft:enchanted_golden_apple"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

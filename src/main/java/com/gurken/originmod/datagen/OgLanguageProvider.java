@@ -27,6 +27,7 @@ public class OgLanguageProvider extends LanguageProvider {
         add(Registration.SCRAP_BLOCK.get(), "Scrap Block");
         add(Registration.TIRE.get(), "Tire");
         add(Registration.SCORCHSTONE.get(), "Scorchstone");
+        add(Registration.SKELETON_BLOCK.get(), "Skeleton");
 
         add(Registration.ROTTEN_WOOD.get(), "Rotten Wood");
         add(Registration.CANNED_VEGETABLES.get(), "Canned Vegetables");
@@ -36,5 +37,15 @@ public class OgLanguageProvider extends LanguageProvider {
         add(Registration.GOLD_SCRAPS.get(), "Gold Scraps");
         add(Registration.PLATINUM_SCRAPS.get(), "Platinum Scraps");
         add(Registration.COBALT_SCRAPS.get(), "Cobalt Scraps");
+
+        add(Registration.RAIDER_SWORD.get(), "Raider Sword");
+        add(Registration.RAIDER_AXE.get(), "Raider Battleaxe");
+        add(Registration.LUNATIC_SWORD.get(), "Lunatic Chainsword");
+        add(Registration.SPEED_SWORD.get(), "Relic Speed Sword");
+        add(Registration.BLOOD_SWORD.get(), "Bloody Blade");
+        add(Registration.GAMBLER_SWORD.get(), "Gambler's Blade");
+        add(Registration.KNIFE_SWORD.get(), "Makeshift Knife");
+        add(Registration.BROKEN_SWORD.get(), "Broken Sword");
+        add(Registration.BAT_SWORD.get(), "Bat");
     }
 }

@@ -24,6 +24,7 @@ public class OgItemModels extends ItemModelProvider {
         withExistingParent(Registration.SCRAP_BLOCK_ITEM.get().getRegistryName().getPath(), modLoc("block/scrap_block"));
         withExistingParent(Registration.TIRE_ITEM.get().getRegistryName().getPath(), modLoc("block/tire"));
         withExistingParent(Registration.SCORCHSTONE_ITEM.get().getRegistryName().getPath(), modLoc("block/scorchstone"));
+        //withExistingParent(Registration.SKELETON_BLOCK_ITEM.get().getRegistryName().getPath(), modLoc("block/skeleton_block"));
 
         singleTexture(Registration.ROTTEN_WOOD.get().getRegistryName().getPath(),
                 mcLoc("item/generated"),
@@ -49,5 +50,33 @@ public class OgItemModels extends ItemModelProvider {
         singleTexture(Registration.COBALT_SCRAPS.get().getRegistryName().getPath(),
                 mcLoc("item/generated"),
                 "layer0", modLoc("item/cobalt_scraps"));
+
+        singleTexture(Registration.RAIDER_SWORD.get().getRegistryName().getPath(),
+                mcLoc("item/handheld"),
+                "layer0", modLoc("item/raider_sword"));
+        singleTexture(Registration.RAIDER_AXE.get().getRegistryName().getPath(),
+                mcLoc("item/handheld"),
+                "layer0", modLoc("item/raider_axe"));
+        singleTexture(Registration.LUNATIC_SWORD.get().getRegistryName().getPath(),
+                mcLoc("item/handheld"),
+                "layer0", modLoc("item/lunatic_sword"));
+        singleTexture(Registration.SPEED_SWORD.get().getRegistryName().getPath(),
+                mcLoc("item/handheld"),
+                "layer0", modLoc("item/speed_sword"));
+        singleTexture(Registration.BLOOD_SWORD.get().getRegistryName().getPath(),
+                mcLoc("item/handheld"),
+                "layer0", modLoc("item/blood_sword"));
+        singleTexture(Registration.GAMBLER_SWORD.get().getRegistryName().getPath(),
+                mcLoc("item/handheld"),
+                "layer0", modLoc("item/gambler_sword"));
+        singleTexture(Registration.KNIFE_SWORD.get().getRegistryName().getPath(),
+                mcLoc("item/handheld"),
+                "layer0", modLoc("item/knife_sword"));
+        singleTexture(Registration.BROKEN_SWORD.get().getRegistryName().getPath(),
+                mcLoc("item/handheld"),
+                "layer0", modLoc("item/broken_sword"));
+        singleTexture(Registration.BAT_SWORD.get().getRegistryName().getPath(),
+                mcLoc("item/handheld"),
+                "layer0", modLoc("item/bat_sword"));
     }
 }

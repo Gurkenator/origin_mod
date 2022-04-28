@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "originmod:block/skeleton_block",
+    "up": "originmod:block/skeleton_block",
+    "north": "originmod:block/skeleton_block",
+    "south": "originmod:block/skeleton_block",
+    "east": "originmod:block/skeleton_block",
+    "west": "originmod:block/skeleton_block"
+  }
+}
