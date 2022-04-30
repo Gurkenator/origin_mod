@@ -1,6 +1,11 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/cube",
   "textures": {
-    "all": "originmod:block/crate_food"
+    "down": "originmod:block/crate_bottom",
+    "up": "originmod:block/crate_food_top",
+    "north": "originmod:block/crate_food_side_meat",
+    "south": "originmod:block/crate_food_side_vegetables",
+    "east": "originmod:block/crate_food_side_soup",
+    "west": "originmod:block/crate_food_side_soup"
   }
 }

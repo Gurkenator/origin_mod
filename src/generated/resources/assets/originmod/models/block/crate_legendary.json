@@ -1,6 +1,11 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/cube",
   "textures": {
-    "all": "originmod:block/crate_legendary"
+    "down": "originmod:block/crate_bottom",
+    "up": "originmod:block/crate_legendary_top",
+    "north": "originmod:block/crate_legendary_side",
+    "south": "originmod:block/crate_legendary_side",
+    "east": "originmod:block/crate_legendary_side",
+    "west": "originmod:block/crate_legendary_side"
   }
 }

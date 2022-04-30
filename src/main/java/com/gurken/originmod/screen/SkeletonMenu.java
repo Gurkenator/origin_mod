@@ -32,21 +32,22 @@ public class SkeletonMenu extends AbstractContainerMenu {
         addPlayerHotbar(inv);
 
         this.blockEntity.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY).ifPresent(handler -> {
-            this.addSlot(new SlotItemHandler(handler, 0, 34, 18));
-            this.addSlot(new SlotItemHandler(handler, 1, 57, 18));
-            this.addSlot(new SlotItemHandler(handler, 2, 83, 18));
-            this.addSlot(new SlotItemHandler(handler, 3, 110, 18));
-            this.addSlot(new SlotItemHandler(handler, 4, 130, 18));
-            this.addSlot(new SlotItemHandler(handler, 5, 150, 18));
-            this.addSlot(new SlotItemHandler(handler, 6, 34, 40));
-            this.addSlot(new SlotItemHandler(handler, 7, 54, 40));
-            this.addSlot(new SlotItemHandler(handler, 8, 74, 40));
-            this.addSlot(new SlotItemHandler(handler, 9, 94, 40));
-            this.addSlot(new SlotItemHandler(handler, 10, 114, 40));
-            this.addSlot(new SlotItemHandler(handler, 11, 134, 40));
-            this.addSlot(new SlotItemHandler(handler, 12, 154, 40));
-            this.addSlot(new SlotItemHandler(handler, 13, 174, 40));
-            this.addSlot(new SlotItemHandler(handler, 14, 194, 40));
+
+            this.addSlot(new SlotItemHandler(handler, 0, 8, 34));
+            this.addSlot(new SlotItemHandler(handler, 1, 30, 34));
+            this.addSlot(new SlotItemHandler(handler, 2, 86, 34));
+            this.addSlot(new SlotItemHandler(handler, 3, 108, 34));
+            this.addSlot(new SlotItemHandler(handler, 4, 130, 34));
+            this.addSlot(new SlotItemHandler(handler, 5, 152, 34));
+            this.addSlot(new SlotItemHandler(handler, 6, 8, 56));
+            this.addSlot(new SlotItemHandler(handler, 7, 26, 56));
+            this.addSlot(new SlotItemHandler(handler, 8, 44, 56));
+            this.addSlot(new SlotItemHandler(handler, 9, 62, 56));
+            this.addSlot(new SlotItemHandler(handler, 10, 80, 56));
+            this.addSlot(new SlotItemHandler(handler, 11, 98, 56));
+            this.addSlot(new SlotItemHandler(handler, 12, 116, 56));
+            this.addSlot(new SlotItemHandler(handler, 13, 134, 56));
+            this.addSlot(new SlotItemHandler(handler, 14, 152, 56));
         });
     }
 

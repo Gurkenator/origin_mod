@@ -15,6 +15,10 @@ public class SkeletonScreen extends AbstractContainerScreen<SkeletonMenu> {
 
     public SkeletonScreen(SkeletonMenu pMenu, Inventory pPlayerInventory, Component pTitle) {
         super(pMenu, pPlayerInventory, pTitle);
+        this.titleLabelX = 8;
+        this.titleLabelY = 22;
+        this.inventoryLabelX = 8;
+        this.inventoryLabelY = 75;
     }
 
     @Override

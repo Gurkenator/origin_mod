@@ -24,7 +24,7 @@ public class OgItemModels extends ItemModelProvider {
         withExistingParent(Registration.SCRAP_BLOCK_ITEM.get().getRegistryName().getPath(), modLoc("block/scrap_block"));
         withExistingParent(Registration.TIRE_ITEM.get().getRegistryName().getPath(), modLoc("block/tire"));
         withExistingParent(Registration.SCORCHSTONE_ITEM.get().getRegistryName().getPath(), modLoc("block/scorchstone"));
-        //withExistingParent(Registration.SKELETON_BLOCK_ITEM.get().getRegistryName().getPath(), modLoc("block/skeleton_block"));
+        withExistingParent(Registration.SKELETON_BLOCK_ITEM.get().getRegistryName().getPath(), modLoc("block/skeleton_block"));
 
         singleTexture(Registration.ROTTEN_WOOD.get().getRegistryName().getPath(),
                 mcLoc("item/generated"),

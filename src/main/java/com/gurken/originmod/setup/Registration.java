@@ -51,6 +51,7 @@ public class Registration {
         CONTAINERS.register(bus);
         ENTITIES.register(bus);
         STRUCTURES.register(bus);
+        MENUS.register(bus);
     }
 
     public static final BlockBehaviour.Properties CRATE_PROPERTIES = BlockBehaviour.Properties.of(Material.WOOD).strength(2f);
@@ -78,6 +79,8 @@ public class Registration {
 
     public static final RegistryObject<Block> SCORCHSTONE = BLOCKS.register("scorchstone", () -> new Block(SCORCHSTONE_PROPERTIES));
     public static final RegistryObject<Item> SCORCHSTONE_ITEM = fromBlock(SCORCHSTONE);
+    public static final RegistryObject<Block> SKELETON_BLOCK = BLOCKS.register("skeleton_block", () -> new Block(SCORCHSTONE_PROPERTIES));
+    public static final RegistryObject<Item> SKELETON_BLOCK_ITEM = fromBlock(SKELETON_BLOCK);
 
     public static final RegistryObject<BlockEntityType<SkeletonBlockEntity>> SKELETON_BLOCK_ENTITY =
             BLOCK_ENTITIES.register("skeleton_block_entity", () ->
@@ -108,10 +111,11 @@ public class Registration {
             () -> IForgeMenuType.create((windowId, inv, data) -> new SkeletonBlockContainer(windowId, data.readBlockPos(), inv, inv.player)));
     */
 
+    /*
     public static final RegistryObject<Block> SKELETON_BLOCK = BLOCKS.register("skeleton",
             () -> new SkeletonBlock(BlockBehaviour.Properties.copy(Blocks.BONE_BLOCK).noOcclusion()));
     public static final RegistryObject<Item> SKELETON_BLOCK_ITEM = fromBlock(SKELETON_BLOCK);
-
+    */
     public static final RegistryObject<Item> ROTTEN_WOOD = ITEMS.register("rotten_wood", () -> new Item(ITEM_PROPERTIES));
     public static final RegistryObject<Item> CANNED_VEGETABLES = ITEMS.register("canned_vegetables", () -> new Item(ITEM_PROPERTIES));
     public static final RegistryObject<Item> IRON_SCRAPS = ITEMS.register("iron_scraps", () -> new Item(ITEM_PROPERTIES));
