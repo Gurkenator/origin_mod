@@ -6,6 +6,7 @@
     "north": "originmod:block/crate_legendary_side",
     "south": "originmod:block/crate_legendary_side",
     "east": "originmod:block/crate_legendary_side",
-    "west": "originmod:block/crate_legendary_side"
+    "west": "originmod:block/crate_legendary_side",
+    "particle": "originmod:block/crate_legendary_top"
   }
 }

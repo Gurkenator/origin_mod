@@ -6,6 +6,7 @@
     "north": "originmod:block/crate_good_side",
     "south": "originmod:block/crate_good_side",
     "east": "originmod:block/crate_good_side",
-    "west": "originmod:block/crate_good_side"
+    "west": "originmod:block/crate_good_side",
+    "particle": "originmod:block/crate_good_top"
   }
 }

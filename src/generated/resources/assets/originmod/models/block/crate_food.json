@@ -6,6 +6,7 @@
     "north": "originmod:block/crate_food_side_meat",
     "south": "originmod:block/crate_food_side_vegetables",
     "east": "originmod:block/crate_food_side_soup",
-    "west": "originmod:block/crate_food_side_soup"
+    "west": "originmod:block/crate_food_side_soup",
+    "particle": "originmod:block/crate_food_top"
   }
 }

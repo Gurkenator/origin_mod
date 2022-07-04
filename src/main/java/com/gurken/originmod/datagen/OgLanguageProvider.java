@@ -47,5 +47,7 @@ public class OgLanguageProvider extends LanguageProvider {
         add(Registration.KNIFE_SWORD.get(), "Makeshift Knife");
         add(Registration.BROKEN_SWORD.get(), "Broken Sword");
         add(Registration.BAT_SWORD.get(), "Bat");
+
+        //add(Registration.CAVE_THING_SPAWN_EGG.get(), "Cave Thing Spawn Egg");
     }
 }

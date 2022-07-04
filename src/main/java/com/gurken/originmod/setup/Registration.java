@@ -3,6 +3,9 @@ package com.gurken.originmod.setup;
 import com.gurken.originmod.OriginMod;
 import com.gurken.originmod.block.custom.SkeletonBlock;
 import com.gurken.originmod.block.entity.custom.SkeletonBlockEntity;
+import com.gurken.originmod.entity.cave_thing.CaveThingEntity;
+import com.gurken.originmod.entity.cave_thing.CaveThingRenderer;
+import com.gurken.originmod.entity.variants.ModEntityTypes;
 import com.gurken.originmod.item.custom.BloodSwordItem;
 import com.gurken.originmod.item.custom.GamblerSwordItem;
 import com.gurken.originmod.item.custom.SpeedSwordItem;
@@ -11,7 +14,11 @@ import com.gurken.originmod.varia.OgModTiers;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
+import net.minecraft.tags.TagKey;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.Mob;
+import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.MenuType;
 import net.minecraft.world.item.BlockItem;
@@ -23,14 +30,20 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.levelgen.feature.StructureFeature;
 import net.minecraft.world.level.material.Material;
+import net.minecraftforge.client.event.EntityRenderersEvent;
+import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.extensions.IForgeMenuType;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.network.IContainerFactory;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import software.bernie.example.registry.EntityRegistry;
+
+import java.util.function.Supplier;
 
 import static com.gurken.originmod.OriginMod.MODID;
 
@@ -57,7 +70,7 @@ public class Registration {
     public static final BlockBehaviour.Properties CRATE_PROPERTIES = BlockBehaviour.Properties.of(Material.WOOD).strength(2f);
     public static final BlockBehaviour.Properties SCRAP_PROPERTIES = BlockBehaviour.Properties.of(Material.METAL).strength(1f);
     public static final BlockBehaviour.Properties SCORCHSTONE_PROPERTIES = BlockBehaviour.Properties.of(Material.STONE).strength(4f);
-    public static final Item.Properties ITEM_PROPERTIES = new Item.Properties().tab(ModSetup.ITEM_GROUP);
+    public static final Item.Properties ITEM_PROPERTIES = new Item.Properties().tab(ModSetup.OG_TAB);
 
     public static final RegistryObject<Block> CRATE_FOOD = BLOCKS.register("crate_food", () -> new Block(CRATE_PROPERTIES));
     public static final RegistryObject<Item> CRATE_FOOD_ITEM = fromBlock(CRATE_FOOD);
@@ -146,8 +159,17 @@ public class Registration {
     public static final RegistryObject<Item> BAT_SWORD = ITEMS.register("bat_sword",
             () -> new SwordItem(OgModTiers.BAT, 1, -2.0f,  ITEM_PROPERTIES));
 
-    public static final Tags.IOptionalNamedTag<Block> CRATE = BlockTags.createOptional(new ResourceLocation(OriginMod.MODID, "crate"));
-    public static final Tags.IOptionalNamedTag<Item> SCRAPS = ItemTags.createOptional(new ResourceLocation(OriginMod.MODID, "scraps"));
+    public static final RegistryObject<EntityType<CaveThingEntity>> CAVE_THING = ENTITIES.register("cave_thing", () -> EntityType.Builder.of(CaveThingEntity::new, MobCategory.CREATURE)
+            .sized(0.6f, 1.95f)
+            .clientTrackingRange(8)
+            .setShouldReceiveVelocityUpdates(false)
+            .build("cave_thing"));
+
+    public static final RegistryObject<Item> CAVE_THING_SPAWN_EGG = ITEMS.register("cave_thing_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntityTypes.CAVE_THING,0x737373, 0xa30303,
+                    new Item.Properties().tab(ModSetup.OG_TAB)));
+    public static final TagKey<Block> CRATE = BlockTags.create(new ResourceLocation(OriginMod.MODID, "crate"));
+    public static final TagKey<Item> SCRAPS = ItemTags.create(new ResourceLocation(OriginMod.MODID, "scraps"));
 
     public static <B extends Block> RegistryObject<Item> fromBlock(RegistryObject<B> block) {
         return ITEMS.register(block.getId().getPath(), () -> new BlockItem(block.get(), ITEM_PROPERTIES));
